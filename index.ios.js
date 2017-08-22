@@ -17,8 +17,7 @@ import {ListItem} from './components/ListItem'
 import {StatusBar} from './components/StatusBar'
 
 // 引入 Wilddog 依赖
-const Wilddog = require('wilddog');
-const WilddogUrl = 'https://scm.wilddogio.com/';
+import wilddog from 'wilddog';
 
 class WilddogList extends Component {
 
@@ -29,11 +28,16 @@ class WilddogList extends Component {
                 rowHasChanged: (row1, row2) => row1 !== row2
             })
         };
+        var config = {
+            syncURL: "https://<appId>.wilddogio.com",
+            authDomain: "<appId>.wilddog.com"
+        }
+        wilddog.initializeApp(config);
         this.itemsRef = WilddogList.getRef().child('items');
     }
 
     static getRef() {
-        return new Wilddog(WilddogUrl);
+        return wilddog.sync();
     }
 
     render() {

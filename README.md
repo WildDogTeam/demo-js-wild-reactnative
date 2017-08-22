@@ -3,7 +3,7 @@
 
 ### 开发环境
 - React Native 0.2.0 以上版本
-- Wilddog JS SDK 0.6.5 +
+- Wilddog JS SDK 2.5.15 +
 
 
 ### 如何运行这个 Demo
@@ -13,7 +13,7 @@
 
 + ```cd <YOUR_DIR_NAME>```
 
-+ ```npm install --save wilddog``` 
++ ```npm install --save wilddog```
 
 + 拷贝 styles.js、index.ios.js 和 components 目录中的所有内容到 ``<YOUR_DIR_NAME>``
 
@@ -30,4 +30,3 @@ npm install --save wilddog
 ### 备注
 
 我们这里只实现了 iOS 版本的示例,所以相关代码都在 `` index.ios.js `` 中, Android 版本上使用 Wilddog 的方式与 iOS 版本并无不同之处
-
